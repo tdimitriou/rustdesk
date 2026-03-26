@@ -1,0 +1,22 @@
+name: Flutter Stable Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      upload_tag:
+        description: "Release tag to publish assets to"
+        required: true
+        default: "stable"
+        type: string
+  push:
+    tags:
+      - "stable"
+      - "stable-*"
+
+jobs:
+  run-flutter-stable-build:
+    uses: ./.github/workflows/flutter-build.yml
+    secrets: inherit
+    with:
+      upload-artifact: true
+      upload-tag: ${{ github.event_name == 'workflow_dispatch' && inputs.upload_tag || github.ref_name }}

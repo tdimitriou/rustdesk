@@ -282,6 +282,7 @@ jobs:
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
+          overwrite_files: true
           files: |
             ./SignOutput/rustdesk-*.msi
             ./SignOutput/rustdesk-*.exe
@@ -434,6 +435,7 @@ jobs:
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
+          overwrite_files: true
           files: |
             ./SignOutput/rustdesk-*.exe
 
@@ -772,6 +774,7 @@ jobs:
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
+          overwrite_files: true
           files: |
             rustdesk*-${{ matrix.job.arch }}.dmg
 
@@ -816,6 +819,7 @@ jobs:
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
+          overwrite_files: true
           files: rustdesk-${{ env.VERSION }}-unsigned.tar.gz
 
   build-rustdesk-android:
@@ -1098,6 +1102,7 @@ jobs:
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
+          overwrite_files: true
           files: |
             ${{steps.sign-rustdesk.outputs.signedReleaseFile}}
 
@@ -1107,6 +1112,7 @@ jobs:
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
+          overwrite_files: true
           files: |
             signed-apk/rustdesk-${{ env.VERSION }}-${{ matrix.job.arch }}.apk
 
@@ -1282,6 +1288,7 @@ jobs:
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
+          overwrite_files: true
           files: |
             ${{steps.sign-rustdesk.outputs.signedReleaseFile}}
 
@@ -1291,6 +1298,7 @@ jobs:
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
+          overwrite_files: true
           files: |
             signed-apk/rustdesk-${{ env.VERSION }}-universal${{ env.suffix }}.apk
 
@@ -1592,6 +1600,7 @@ jobs:
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
+          overwrite_files: true
           files: |
             rustdesk-*.deb
             rustdesk-*.rpm
@@ -1628,6 +1637,7 @@ jobs:
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
+          overwrite_files: true
           files: |
             res/rustdesk-${{ env.VERSION }}*.zst
 
@@ -1848,6 +1858,7 @@ jobs:
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
+          overwrite_files: true
           files: |
             rustdesk-${{ env.VERSION }}-${{ matrix.job.arch }}-sciter.deb
 
@@ -1905,6 +1916,7 @@ jobs:
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
+          overwrite_files: true
           files: |
             ./appimage/rustdesk-${{ env.VERSION }}-*.AppImage
 
@@ -1990,6 +2002,7 @@ jobs:
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
+          overwrite_files: true
           files: |
             flatpak/rustdesk-${{ env.VERSION }}-${{ matrix.job.arch }}${{ matrix.job.suffix }}.flatpak
 
@@ -2063,5 +2076,6 @@ jobs:
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
+          overwrite_files: true
           files: |
             flutter/build/rustdesk-${{ env.VERSION }}-${{ env.RELEASE_NAME }}.tar.gz
