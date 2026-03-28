@@ -41,7 +41,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("length %min% to %max%", "längd %min% till %max%"),
         ("starts with a letter", "börjar med en bokstav"),
         ("allowed characters", "tillåtna tecken"),
-        ("id_change_tip", "Bara a-z, A-Z, 0-9, - (dash) och _ (understräck) tecken är tillåtna. Den första bokstaven måste vara a-z, A-Z. Längd mellan 6 och 16."),
+        ("id_change_tip", "Endast tecknen a-z, A-Z, 0-9, @, . (punkt), - (bindestreck) och _ (understreck) är tillåtna. Det första tecknet måste vara en bokstav a-z eller A-Z. @ är obligatoriskt; efter det minst 3 bokstäver eller siffror. Längd mellan 8 och 32."),
         ("Website", "Hemsida"),
         ("About", "Om"),
         ("Slogan_tip", ""),

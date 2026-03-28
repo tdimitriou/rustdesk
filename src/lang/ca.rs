@@ -41,7 +41,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("length %min% to %max%", "Entre %min% i %max% caràcters"),
         ("starts with a letter", "Comença amb una lletra"),
         ("allowed characters", "Caràcters admesos"),
-        ("id_change_tip", "Els caràcters admesos són: a-z, A-Z, 0-9, - (dash), _ (guió baix). El primer caràcter ha de ser a-z/A-Z, i una mida de 6 a 16 caràcters."),
+        ("id_change_tip", "Només es permeten els caràcters a-z, A-Z, 0-9, @, . (punt), - (guió) i _ (guió baix). El primer caràcter ha de ser una lletra a-z o A-Z. El símbol @ és obligatori; després com a mínim 3 lletres o xifres. Longitud entre 8 i 32."),
         ("Website", "Lloc web"),
         ("About", "Quant al RustDesk"),
         ("Slogan_tip", "Fet de tot cor dins d'aquest món caòtic!\nTraducció: Benet R. i Camps (BennyBeat)."),

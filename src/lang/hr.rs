@@ -41,7 +41,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("length %min% to %max%", "duljina %min% do %max%"),
         ("starts with a letter", "Počinje slovom"),
         ("allowed characters", "Dopušteni znakovi"),
-        ("id_change_tip", "Dopušteni su samo a-z, A-Z, 0-9, - (dash) i _ (donja crta) znakovi. Prvi znak mora biti slovo a-z, A-Z. Duljina je od 6 do 16."),
+        ("id_change_tip", "Dopušteni su samo znakovi a-z, A-Z, 0-9, @, . (točka), - (crtica) i _ (donja crta). Prvi znak mora biti slovo a-z ili A-Z. Znak @ je obavezan; iza njega najmanje 3 slova ili brojke. Duljina od 8 do 32."),
         ("Website", "Web stranica"),
         ("About", "O programu"),
         ("Slogan_tip", "Stvoren srcem u ovom kaotičnom svijetu!"),

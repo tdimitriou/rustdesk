@@ -41,7 +41,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("length %min% to %max%", "%min%～%max% 文字の長さ"),
         ("starts with a letter", "アルファベットで始まる"),
         ("allowed characters", "使用可能な文字"),
-        ("id_change_tip", "使用できるのは大文字・小文字のアルファベット、数字、アンダースコア (_) のみです。先頭の文字はアルファベット、長さは 6 文字から 16 文字である必要があります。"),
+        ("id_change_tip", "使用できるのは a-z、A-Z、0-9、@、.（ドット）、-（ハイフン）、_（アンダースコア）のみです。先頭は a-z または A-Z の英字である必要があります。@ は必須で、その後に英字または数字を少なくとも 3 文字必要です。長さは 8～32 文字です。"),
         ("Website", "公式サイト"),
         ("About", "RustDesk について"),
         ("Slogan_tip", "この混沌とした世界から、愛をこめて！"),

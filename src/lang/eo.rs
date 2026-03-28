@@ -41,7 +41,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("length %min% to %max%", "longeco %min% al %max%"),
         ("starts with a letter", "komencas kun letero"),
         ("allowed characters", "permesitaj signoj"),
-        ("id_change_tip", "Nur la signoj a-z, A-Z, 0-9, - (dash), _ (substreko) povas esti uzataj. La unua litero povas esti inter a-z, A-Z. La longeco devas esti inter 6 kaj 16."),
+        ("id_change_tip", "Nur la signoj a-z, A-Z, 0-9, @, . (punkto), - (streko) kaj _ (substreko) estas permesitaj. La unua signo devas esti litero a-z aŭ A-Z. @ estas deviga; post ĝi almenaŭ 3 literoj aŭ ciferoj. Longo inter 8 kaj 32."),
         ("Website", "Retejo"),
         ("About", "Pri"),
         ("Slogan_tip", "Farita kun koro en ĉi tiu ĥaosa mondo!"),

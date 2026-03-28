@@ -41,7 +41,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("length %min% to %max%", "길이 %min% ~ %max%"),
         ("starts with a letter", "문자로 시작해야 합니다"),
         ("allowed characters", "허용되는 문자"),
-        ("id_change_tip", "a-z, A-Z, 0-9, -(대시) 및 _(밑줄) 문자만 허용됩니다. 첫 글자는 a-z, A-Z여야 합니다. 길이는 6에서 16 사이여야 합니다."),
+        ("id_change_tip", "a-z, A-Z, 0-9, @, .(점), -(대시), _(밑줄) 문자만 사용할 수 있습니다. 첫 글자는 a-z 또는 A-Z 알파벳이어야 합니다. @는 필수이며 그 뒤에는 문자나 숫자가 최소 3개 있어야 합니다. 길이는 8~32자입니다."),
         ("Website", "웹사이트"),
         ("About", "정보"),
         ("Slogan_tip", "이 혼란스러운 세상에서 마음을 담아 만들었습니다! - 한국어 번역: 비너스걸"),

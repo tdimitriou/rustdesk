@@ -69,6 +69,53 @@ class RegexValidationRule extends ValidationRule {
   }
 }
 
+/// Must match `hbb_common::is_valid_custom_id` (legacy + numeric + email-style).
+bool isValidCustomIdForChange(String id) {
+  if (id.isEmpty) {
+    return false;
+  }
+  if (id.runes.every((c) => c >= 0x30 && c <= 0x39)) {
+    final l = id.length;
+    return l >= 6 && l <= 32;
+  }
+  if (RegExp(r'^[a-zA-Z][\w-]{5,15}$').hasMatch(id)) {
+    return true;
+  }
+  final l = id.length;
+  if (l < 8 || l > 32) {
+    return false;
+  }
+  final at = id.indexOf('@');
+  if (at < 0 || id.indexOf('@', at + 1) >= 0) {
+    return false;
+  }
+  final left = id.substring(0, at);
+  final right = id.substring(at + 1);
+  if (left.isEmpty || right.length < 3) {
+    return false;
+  }
+  if (!RegExp(r'^[a-zA-Z][a-zA-Z0-9._-]*$').hasMatch(left)) {
+    return false;
+  }
+  if (!RegExp(r'^[a-zA-Z0-9]+$').hasMatch(right)) {
+    return false;
+  }
+  return true;
+}
+
+class _PredicateValidationRule extends ValidationRule {
+  final String _nameKey;
+  final bool Function(String) _predicate;
+
+  _PredicateValidationRule(this._nameKey, this._predicate);
+
+  @override
+  String get name => translate(_nameKey);
+
+  @override
+  bool validate(String value) => _predicate(value);
+}
+
 void changeIdDialog() {
   var newId = "";
   var msg = "";
@@ -76,10 +123,8 @@ void changeIdDialog() {
   TextEditingController controller = TextEditingController();
   final RxString rxId = controller.text.trim().obs;
 
-  final rules = [
-    RegexValidationRule('starts with a letter', RegExp(r'^[a-zA-Z]')),
-    LengthRangeValidationRule(6, 16),
-    RegexValidationRule('allowed characters', RegExp(r'^[\w-]*$'))
+  final rules = <ValidationRule>[
+    _PredicateValidationRule('id_rule_valid_format', isValidCustomIdForChange),
   ];
 
   gFFI.dialogManager.show((setState, close, context) {
@@ -134,10 +179,10 @@ void changeIdDialog() {
             decoration: InputDecoration(
                 labelText: translate('Your new ID'),
                 errorText: msg.isEmpty ? null : translate(msg),
-                suffixText: '${rxId.value.length}/16',
+                suffixText: '${rxId.value.length}/32',
                 suffixStyle: const TextStyle(fontSize: 12, color: Colors.grey)),
             inputFormatters: [
-              LengthLimitingTextInputFormatter(16),
+              LengthLimitingTextInputFormatter(32),
               // FilteringTextInputFormatter(RegExp(r"[a-zA-z][a-zA-z0-9\_]*"), allow: true)
             ],
             controller: controller,

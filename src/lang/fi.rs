@@ -41,7 +41,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("length %min% to %max%", "pituus %min%–%max%"),
         ("starts with a letter", "alkaa kirjaimella"),
         ("allowed characters", "sallitut merkit"),
-        ("id_change_tip", "Sallitut merkit: a–z, A–Z, 0–9, - ja _. Ensimmäisen merkin on oltava kirjain. Pituus 6–16 merkkiä."),
+        ("id_change_tip", "Sallitut merkit: a–z, A–Z, 0–9, @, . (piste), - (viiva) ja _ (alaviiva). Ensimmäisen merkin on oltava kirjain a–z tai A–Z. @ on pakollinen; sen jälkeen vähintään 3 kirjainta tai numeroa. Pituus 8–32 merkkiä."),
         ("Website", "Verkkosivusto"),
         ("About", "Tietoa"),
         ("Slogan_tip", "Tehty sydämellä tässä kaoottisessa maailmassa!"),

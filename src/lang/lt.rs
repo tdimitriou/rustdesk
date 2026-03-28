@@ -41,7 +41,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("length %min% to %max%", "ilgis %min% iki %max%"),
         ("starts with a letter", "prasideda raide"),
         ("allowed characters", "leistini simboliai"),
-        ("id_change_tip", "Leidžiami tik simboliai a–z, A–Z, 0–9 ir _ (pabraukimas). Pirmoji raidė turi būti a-z, A-Z. Ilgis nuo 6 iki 16."),
+        ("id_change_tip", "Leidžiami tik simboliai a-z, A–Z, 0–9, @, . (taškas), – (brūkšnys) ir _ (pabraukimas). Pirmasis simbolis turi būti raidė a–z arba A–Z. @ privalomas; po jo bent 3 raidės arba skaitmenys. Ilgis nuo 8 iki 32."),
         ("Website", "Interneto svetainė"),
         ("About", "Apie"),
         ("Slogan_tip", "Sukurta su siela šiame beprotiškame pasaulyje!"),

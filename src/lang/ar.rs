@@ -41,7 +41,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("length %min% to %max%", "الطول من %min% الى %max%"),
         ("starts with a letter", "يبدأ بحرف"),
         ("allowed characters", "الحروف المسموح بها"),
-        ("id_change_tip", "فقط a-z, A-Z, 0-9, - (dash) و _ مسموح بها. اول حرف يجب ان يكون a-z او A-Z. الطول بين 6 و 16."),
+        ("id_change_tip", "يُسمح فقط بالأحرف a-z و A-Z و 0-9 و @ و . (نقطة) و - (شرطة) و _ (شرطة سفلية). يجب أن يكون الحرف الأول حرفًا من a-z أو A-Z. الرمز @ إلزامي وبعده يجب أن يتبع 3 أحرف أو أرقام على الأقل. الطول بين 8 و 32."),
         ("Website", "الموقع"),
         ("About", "عن"),
         ("Slogan_tip", "صنع بحب في هذا العالم الفوضوي!"),

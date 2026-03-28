@@ -41,7 +41,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("length %min% to %max%", "אורך בין %min% ל %max%"),
         ("starts with a letter", "מתחיל באות"),
         ("allowed characters", "תווים מותרים"),
-        ("id_change_tip", "מותרים רק תווים a-z, A-Z, 0-9, מקף (-) וקו תחתון (_). התו הראשון חייב להיות אות (a-z, A-Z). אורך בין 6 ל-16 תווים."),
+        ("id_change_tip", "מותרים רק התווים a-z, A-Z, 0-9, @, . (נקודה), - (מקף) ו- _ (קו תחתון). התו הראשון חייב להיות אות a-z או A-Z. התו @ חובה; אחריו לפחות 3 אותיות או ספרות. אורך בין 8 ל-32 תווים."),
         ("Website", "דף הבית"),
         ("About", "אודות"),
         ("Slogan_tip", "נוצר באהבה בעולם הכאוטי הזה!"),

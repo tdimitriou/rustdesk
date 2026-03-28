@@ -41,7 +41,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("length %min% to %max%", "garums %min% līdz %max%"),
         ("starts with a letter", "sākas ar burtu"),
         ("allowed characters", "atļautās rakstzīmes"),
-        ("id_change_tip", "Atļautas tikai rakstzīmes a-z, A-Z, 0-9, - (domuzīme) un _ (pasvītrojums). Pirmajam burtam ir jābūt a-z, A-Z. Garums no 6 līdz 16."),
+        ("id_change_tip", "Atļautas tikai rakstzīmes a-z, A-Z, 0-9, @, . (punkts), - (domuzīme) un _ (pasvītrojums). Pirmajam simbolam jābūt burtam a-z vai A-Z. @ ir obligāts; pēc tā vismaz 3 burti vai cipari. Garums no 8 līdz 32."),
         ("Website", "Tīmekļa vietne"),
         ("About", "Par"),
         ("Slogan_tip", "Radīts ar sirdi šajā haotiskajā pasaulē!"),

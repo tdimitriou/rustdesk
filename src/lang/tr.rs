@@ -41,7 +41,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("length %min% to %max%", "uzunluk %min% ila %max%"),
         ("starts with a letter", "bir harfle başlar"),
         ("allowed characters", "izin verilen karakterler"),
-        ("id_change_tip", "Yalnızca a-z, A-Z, 0-9, - (dash) ve _ (alt çizgi) karakterlerini kullanabilirsiniz. İlk karakter a-z veya A-Z olmalıdır. Uzunluk 6 ile 16 karakter arasında olmalıdır."),
+        ("id_change_tip", "Yalnızca a-z, A-Z, 0-9, @, . (nokta), - (tire) ve _ (alt çizgi) karakterlerine izin verilir. İlk karakter a-z veya A-Z harfi olmalıdır. @ zorunludur; ardından en az 3 harf veya rakam. Uzunluk 8 ile 32 arasında."),
         ("Website", "Website"),
         ("About", "Hakkında"),
         ("Slogan_tip", "Bu kaotik dünyada gönülden yapıldı!"),

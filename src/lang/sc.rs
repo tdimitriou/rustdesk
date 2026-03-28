@@ -41,7 +41,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("length %min% to %max%", "longària dae %min% a %max%"),
         ("starts with a letter", "incumintza cun una lìtera"),
         ("allowed characters", "caràteres cunsentidos"),
-        ("id_change_tip", "Podes impreare petzi sos caràteres a-z, A-Z, 0-9, - (tratigheddu) e _ (sutaliniadu).\nSu primu caràtere depet èssere a-z o A-Z.\nSa longària depet èssere de intre 6 e 16 caràteres."),
+        ("id_change_tip", "Sos caràteres cunsentidos sunt petzi a-z, A-Z, 0-9, @, . (puntu), - (tratigheddu) e _ (sutaliniadu). Su primu caràtere depet èssere una lìtera a-z o A-Z. Su sìmbulu @ est obligatòriu; a pustis a su mancu 3 lìteras o nùmeros. Sa longària depet èssere intre 8 e 32 caràteres."),
         ("Website", "Situ web programma"),
         ("About", "Info programma"),
         ("Slogan_tip", "Fatu cun su coro in custu mundu caòticu!"),

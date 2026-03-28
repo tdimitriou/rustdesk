@@ -41,7 +41,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("length %min% to %max%", "lunghezza da %min% a %max%"),
         ("starts with a letter", "inizia con una lettera"),
         ("allowed characters", "caratteri consentiti"),
-        ("id_change_tip", "Puoi usare solo i caratteri a-z, A-Z, 0-9, - (dash) e _ (sottolineato).\nIl primo carattere deve essere a-z o A-Z.\nLa lunghezza deve essere fra 6 e 16 caratteri."),
+        ("id_change_tip", "Sono consentiti solo i caratteri a-z, A-Z, 0-9, @, . (punto), - (trattino) e _ (sottolineato). Il primo carattere deve essere una lettera a-z o A-Z. Il simbolo @ è obbligatorio; dopo di esso almeno 3 lettere o numeri. Lunghezza tra 8 e 32 caratteri."),
         ("Website", "Sito web programma"),
         ("About", "Info programma"),
         ("Slogan_tip", "Realizzato con il cuore in questo mondo caotico!"),
