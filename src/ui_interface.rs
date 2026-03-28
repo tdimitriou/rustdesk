@@ -1446,6 +1446,8 @@ async fn check_id(
             old_id,
             id,
             uuid,
+            pk: Config::get_key_pair().1.into(),
+            no_register_device: Config::no_register_device(),
             ..Default::default()
         });
         let mut ok = false;
@@ -1473,6 +1475,9 @@ async fn check_id(
                             }
                             Ok(register_pk_response::Result::INVALID_ID_FORMAT) => {
                                 return INVALID_FORMAT;
+                            }
+                            Ok(register_pk_response::Result::UUID_MISMATCH) => {
+                                return "change_id_uuid_mismatch";
                             }
                             _ => {}
                         }

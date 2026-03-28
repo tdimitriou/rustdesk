@@ -42,6 +42,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("starts with a letter", ""),
         ("allowed characters", ""),
         ("id_change_tip", ""),
+        ("change_id_uuid_mismatch", ""),
         ("Website", ""),
         ("About", ""),
         ("Slogan_tip", ""),
